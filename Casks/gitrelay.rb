@@ -1,6 +1,6 @@
 cask "gitrelay" do
-  version "0.2.1"
-  sha256 "34cf2b59f1c275adb85359fab0a2cb68cc153411e28579037d426b9cdd9ba05b"
+  version "0.2.2"
+  sha256 "909d47c522ee5228634495268529aacd58ed6d7a981feb4c5918317760035445"
 
   url      "https://github.com/yangflow/gitrelay/releases/download/v#{version}/GitRelay-#{version}.dmg"
   name     "GitRelay"
