@@ -1,10 +1,10 @@
 cask "gitrelay" do
-  version "0.3.2"
-  sha256 "cdf0e34521f1948faddb7733cd14c5a73e33ad00c6589c073c0847fd9f465242"
+  version "0.4.0"
+  sha256 "4136d558b4f350ddefab67fd0cc7c64032d82ef9c83b3d0d3f16957ff04606f4"
 
   url      "https://github.com/yangflow/gitrelay/releases/download/v#{version}/GitRelay-#{version}.dmg"
   name     "GitRelay"
-  desc     "Mirror any Git repository to any other Git repository, automatically"
+  desc     "Local-first Git repository mirroring workspace for macOS"
   homepage "https://github.com/yangflow/gitrelay"
 
   livecheck do
@@ -12,9 +12,11 @@ cask "gitrelay" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: ">= :tahoe"
 
   app "GitRelay.app"
+
+  binary "#{appdir}/GitRelay.app/Contents/MacOS/gitrelayctl", target: "gitrelayctl"
 
   zap trash: [
     "~/.local/share/gitrelay",
